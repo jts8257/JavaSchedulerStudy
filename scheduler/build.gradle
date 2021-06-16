@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // 배치 의존성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+
+    // h2 DB 의존성 추가 (DB 의존성 없이 배치 Config가 포함되어 있으면 에러)
+    implementation 'com.h2database:h2'
+
+    // jdbc 의존성 추가 : DB 접근, 제어
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+}
+
+test {
+    useJUnitPlatform()
+}
