@@ -1,8 +1,8 @@
 # JavaSchedulerStudy
 
-Java Spring Scheduler Study
-(1) Task Scheduler 
-(2) Quartz
+Java Spring Scheduler Study<br>
+(1) Task Scheduler <br>
+(2) Quartz<br>
 
 -------
 
