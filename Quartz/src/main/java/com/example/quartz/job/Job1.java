@@ -8,6 +8,9 @@ import org.quartz.UnableToInterruptJobException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 @Slf4j
 @Component
@@ -20,6 +23,10 @@ public class Job1 extends QuartzJobBean implements InterruptableJob {
 
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-        System.out.println(">>>>>run");
+        Date now = new Date();
+        //SimpleDateFormat now = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
+        SimpleDateFormat TimeFormat = new SimpleDateFormat("HH:mm:ss.SSS");
+
+        System.out.println("["+ TimeFormat.format(now) +"] Job1 Run");
     }
 }

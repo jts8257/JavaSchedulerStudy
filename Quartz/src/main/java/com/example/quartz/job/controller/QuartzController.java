@@ -31,14 +31,8 @@ public class QuartzController {
         JobDetail Job1Detail =
                 buildJobDetail(Job1.class, "testJob", "test", new HashMap());
 
-        scheduler.scheduleJob(Job1Detail, buildJobTrigger("0 * * * * ?"));
-        /* manual
-         Date scheduleJob(JobDetail jobDetail, Trigger trigger) throws SchedulerException;
+        scheduler.scheduleJob(Job1Detail, buildJobTrigger("0 0 0 * * ?"));
 
-         Add the given JobDetail to the Scheduler, and associate the given Trigger with it.
-         If the given Trigger does not reference any Job,
-         then it will be set to reference the Job passed with it into this method.
-         */
     }
 
     public Trigger buildJobTrigger(String scheduleExp) {
@@ -54,7 +48,5 @@ public class QuartzController {
                 .usingJobData(jobDataMap)
                 .build();
     }
-
-    JobDetail
 }
 
