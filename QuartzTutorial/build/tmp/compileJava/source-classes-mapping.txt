@@ -2,6 +2,8 @@ quartztutorial/QuartzMain.java
  quartztutorial.QuartzMain
 quartztutorial/Job/HelloJob.java
  quartztutorial.Job.HelloJob
+quartztutorial/Job/jobdata/DumpJobData.java
+ quartztutorial.Job.jobdata.DumpJobData
 quartztutorial/Job/DumbJob.java
  quartztutorial.Job.DumbJob
 quartztutorial/QuartzMain2.java

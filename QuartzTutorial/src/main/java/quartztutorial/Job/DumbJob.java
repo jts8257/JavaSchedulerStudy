@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
+@PersistJobDataAfterExecution
 public class DumbJob implements Job {
 
     private final Date now = new Date();
