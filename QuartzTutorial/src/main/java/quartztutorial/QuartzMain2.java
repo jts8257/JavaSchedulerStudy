@@ -4,11 +4,6 @@ import org.quartz.impl.StdSchedulerFactory;
 import quartztutorial.Job.DumbJob;
 
 import org.quartz.JobBuilder;
-import quartztutorial.Job.jobdata.DumpJobData;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.quartz.SimpleScheduleBuilder.*;
 import static org.quartz.TriggerBuilder.newTrigger;
 
